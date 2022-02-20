@@ -28,7 +28,8 @@ class LoseScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
             ),
-            Text('Your word was: ${game.word}', style: TextStyle(fontSize: 25)),
+            Text('Your word was: ${game.word()}',
+                style: TextStyle(fontSize: 25)),
             Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 0, 50),
             ),
