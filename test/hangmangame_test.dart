@@ -4,8 +4,8 @@ import 'package:hangman_game/models/hangmangame.dart';
 void main() {
   //This test group will run several tests on the constructor of our hangmanGame class
   group('Test Hangman Constructor', () {
-    test('Instance variable word should match word given to constructor', () {
-      //make a wacky variable that we will use to pass to the constructor as our word
+    test('Function word() should return the word given to constructor', () {
+      //make a variable that we will use to pass to the constructor as our word
       String word = 'glorp';
       //pass word to game constructor and create object called hangmanGame
       final hangmanGame = HangmanGame(word);
@@ -13,9 +13,8 @@ void main() {
       expect(hangmanGame.word(), word);
     });
 
-    test('Instance variable correct_guess should be empty string initially',
-        () {
-      //make a wacky variable that we will use to pass to the constructor as our word
+    test('Function correctGuesses() should return empty string initially', () {
+      //make a variable that we will use to pass to the constructor as our word
       String word = 'glorp';
       //pass word to game constructor and create object called hangmanGame
       final hangmanGame = HangmanGame(word);
@@ -23,8 +22,8 @@ void main() {
       expect(hangmanGame.correctGuesses().isEmpty, isTrue);
     });
 
-    test('Instance variable wrongGuesses should be empty string initially', () {
-      //make a wacky variable that we will use to pass to the constructor as our word
+    test('Function wrongGuesses() should return empty string initially', () {
+      //make a variable that we will use to pass to the constructor as our word
       String word = 'glorp';
       //pass word to game constructor and create object called hangmanGame
       final hangmanGame = HangmanGame(word);
@@ -36,7 +35,7 @@ void main() {
   //This test group will run several tests on the way the game should respond to certain guesses
   group('Test Hangman Guessing Behavior', () {
     test('When user guesses correctly', () {
-      //make a wacky variable that we will use to pass to the constructor as our word
+      //make a variable that we will use to pass to the constructor as our word
       String word = 'garply';
       //pass word to game constructor and create object called hangmanGame
       final hangmanGame = HangmanGame(word);
@@ -50,7 +49,7 @@ void main() {
     }, skip: true);
 
     test('When user guess incorrectly', () {
-      //make a wacky variable that we will use to pass to the constructor as our word
+      //make a variable that we will use to pass to the constructor as our word
       String word = 'garply';
       //pass word to game constructor and create object called hangmanGame
       final hangmanGame = HangmanGame(word);
@@ -65,7 +64,7 @@ void main() {
     }, skip: true);
 
     test('When user guesses same letter repeatedly (case-insensitive)', () {
-      //make a wacky variable that we will use to pass to the constructor as our word
+      //make a variable that we will use to pass to the constructor as our word
       String word = 'garply';
       //pass word to game constructor and create object called hangmanGame
       final hangmanGame = HangmanGame(word);
